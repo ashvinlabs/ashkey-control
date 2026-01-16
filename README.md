@@ -75,4 +75,13 @@ For a detailed breakdown of the functional requirements and technical architectu
 
 ## 🔒 License
 
-Proprietary Software &copy; Ashvin Labs. All Rights Reserved.
+**Copyright © 2026 Ashvin Labs.**
+
+This project is licensed under the **GNU General Public License v3.0 (GPLv3)**.
+
+- **Open Source**: You are free to use, modify, and distribute this software under the terms of the GPLv3.
+- **Copyleft**: Any modifications or derivative works must also be open-sourced under the same license.
+- **Commercial Usage**: Developing closed-source products based on this code is **strictly prohibited** under the GPLv3.
+- **Dual Licensing**: Use of this software for proprietary or commercial purposes requires a separate commercial license from Ashvin Labs.
+
+For commercial licensing inquiries, please contact **Ashvin Labs**.
