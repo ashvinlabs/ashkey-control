@@ -1,7 +1,78 @@
-# Tauri + React + Typescript
+# AshKey Control
 
-This template should help get you started developing with Tauri, React and Typescript in Vite.
+<div align="center">
+  <img src="src-tauri/icons/icon.png" alt="AshKey Logo" width="128" height="128" />
+  <br/>
+  
+  **System-level utility for harnessing secondary USB keyboards as dedicated macro pads.**
+  
+  [![Status](https://img.shields.io/badge/Status-Development-blue)](https://github.com/ashvinlabs/ashkey-control)
+  [![Stack](https://img.shields.io/badge/Stack-Tauri_v2_|_Rust_|_React_|_Tailwind-orange)](#tech-stack)
+</div>
 
-## Recommended IDE Setup
+## 🚀 Overview
 
-- [VS Code](https://code.visualstudio.com/) + [Tauri](https://marketplace.visualstudio.com/items?itemName=tauri-apps.tauri-vscode) + [rust-analyzer](https://marketplace.visualstudio.com/items?itemName=rust-lang.rust-analyzer)
+AshKey Control solves the "Windows Input Paradox" by implementing a **Dual-Sync Engine** that identifies and intercepts specific keyboards at the system level. This allows users to turn any standard USB number pad or keyboard into a powerful, programmable control surface without interfering with their primary typing device.
+
+## ✨ Key Features (MVP)
+
+- **Device Discovery**: Automatically enumerates connected HID keyboards with Vendor and Product IDs.
+- **Dual-Sync Architecture**: (In Progress) Uses `RawInput` for identification and `WH_KEYBOARD_LL` hooks for interception.
+- **Visual Dashboard**: A dark-themed, modern React interface for managing devices and mappings.
+- **Auto-Detection**: Real-time plug-and-play support.
+
+## 🛠️ Tech Stack
+
+- **Core**: [Tauri v2](https://v2.tauri.app/)
+- **Backend**: Rust (Windows API: `Win32_UI_Input_RawInput`, `SetupAPI`)
+- **Frontend**: React + TypeScript + Vite
+- **Styling**: Tailwind CSS v4
+
+## 📦 Getting Started
+
+### Prerequisites
+
+- **Node.js** (v18+)
+- **Rust** (Stable)
+- **Visual Studio C++ Build Tools** (for Windows development)
+
+### Installation
+
+1.  Clone the repository:
+    ```bash
+    git clone git@ashvinlab-github:ashvinlabs/ashkey-control.git
+    cd ashkey-control
+    ```
+
+2.  Install frontend dependencies:
+    ```bash
+    npm install
+    ```
+
+3.  Run the development server:
+    ```bash
+    npm run tauri dev
+    ```
+
+## 🗺️ Roadmap
+
+- [x] **Phase 1: Foundation**
+    - [x] Core App Structure & UI
+    - [x] HID Device Enumeration
+    - [x] Custom Branding & Polish
+- [ ] **Phase 2: Identification & Interception**
+    - [ ] "Press to Identify" Mode
+    - [ ] Implement Keyboard Hook in Rust
+    - [ ] "Dual-Sync" Handshake Logic
+- [ ] **Phase 3: Mapping Engine**
+    - [ ] UI for Key-to-Macro Assignment
+    - [ ] Profile Persistence (JSON)
+    - [ ] MIDI & OBS Integration
+
+## 📄 Documentation
+
+For a detailed breakdown of the functional requirements and technical architecture, see the [Feature Specification](docs/feature-spec.md).
+
+## 🔒 License
+
+Proprietary Software &copy; Ashvin Labs. All Rights Reserved.
